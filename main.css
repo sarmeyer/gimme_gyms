@@ -81,8 +81,8 @@ iframe {
   background-size: cover;
 }
 .venues {
-  margin-top: 18%;
   font-size: 35px;
+  color: #FAF6E7;
 }
 #food {
   display: flex;
@@ -92,14 +92,35 @@ iframe {
   padding-left: 20px;
   padding-right: 10px;
 }
+.recipe_search {
+  font-size: 2em;
+  position: absolute;
+  right: 5%;
+  height: 45px;
+  width: 300px;
+}
 .credit {
   text-align: right;
   font-size: 18px;
 }
-#food img {
+.recipe_images {
   width: 270px;
   height: 230px;
   margin: 5px;
+}
+.titles {
+  max-width: 270px;
+  display: block;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility opacity 0.2s;
+}
+#food div:hover .titles {
+visibility: visible;
+opacity: 1;
 }
 #food div {
   display: inline-block;

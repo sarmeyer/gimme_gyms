@@ -51,7 +51,6 @@ $('#homeButton').on('click',function(){
     })
   }
   function makeMarkers(pins){
-    // var infowindow = null;
     for (var i = 0; i < pins.length; i++) {
       var venueLat  = pins[i].location.lat;
       var venueLong = pins[i].location.lng;
