@@ -46,26 +46,21 @@ $('#homeButton').on('click',function(){
   function venueList(venues) {
     venues.forEach(function(venue){
       var name = document.createElement('h2');
-      $(name).addClass('places');
       name.id = venue.id;
       $(name).html(venue.name);
-      $('.venues').append(name);
+      getVenueUrl(venue.id).done(function (venue) {
+        var url = venue.response.venue.canonicalUrl;
+        var link = document.createElement('a');
+        link.href = url;
+        $(link).html(name)
+        $('.venues').append(link);
+        return venue.response.venue.canonicalUrl
     })
-    getLinks(venues);
-  }
-  function getLinks(venues){
-    $.get(`https://api.foursquare.com/v2/venues/${this.id}?oauth_token=AIG3KVDPZUNIT1PKK3CW2NCKPS51KDRTKLXNU3IFX1GUGFQA&v=20160623`,
-      function(data, status){
-        venueLinks(data.response.venue.canonicalUrl);
-     })
-   }
-  function venueLinks(url){
-    $('.places').each(function () {
-      var currentPlace = $(this);
-      currentPlace.wrap("<a href='" + url + "'</a>");
-    })
-  }
-
+  })
+}
+  function getVenueUrl(id) {
+    return $.get(`https://api.foursquare.com/v2/venues/${id}?oauth_token=AIG3KVDPZUNIT1PKK3CW2NCKPS51KDRTKLXNU3IFX1GUGFQA&v=20160623`);
+    }
   function makeMarkers(pins){
     for (var i = 0; i < pins.length; i++) {
       var venueLat  = pins[i].location.lat;

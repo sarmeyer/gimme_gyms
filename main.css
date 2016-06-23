@@ -80,6 +80,9 @@ iframe {
   background-image: url(http://cdn.phillymag.com/wp-content/uploads/2016/02/yoga-studio.jpg);
   background-size: cover;
 }
+a {
+  color: #FAF6E7;
+}
 .venues {
   font-size: 35px;
   color: #FAF6E7;
