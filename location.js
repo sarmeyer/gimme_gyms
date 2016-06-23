@@ -37,7 +37,7 @@ $('#homeButton').on('click',function(){
     }, 1000);
   }
   function getGyms(result){
-    $.get("https://api.foursquare.com/v2/venues/search?ll="+ result.latitude + "," + result.longitude + "&intent=browse&radius=300&categoryId=4bf58dd8d48988d175941735&oauth_token=AIG3KVDPZUNIT1PKK3CW2NCKPS51KDRTKLXNU3IFX1GUGFQA&v=20160621",
+    $.get(`https://api.foursquare.com/v2/venues/search?ll=${result.latitude}, ${result.longitude}&intent=browse&radius=300&categoryId=4bf58dd8d48988d175941735&oauth_token=AIG3KVDPZUNIT1PKK3CW2NCKPS51KDRTKLXNU3IFX1GUGFQA&v=20160621`,
     function(data, status){
       venueList(data.response.venues);
       makeMarkers(data.response.venues);
@@ -46,10 +46,26 @@ $('#homeButton').on('click',function(){
   function venueList(venues) {
     venues.forEach(function(venue){
       var name = document.createElement('h2');
+      $(name).addClass('places');
+      name.id = venue.id;
       $(name).html(venue.name);
       $('.venues').append(name);
     })
+    getLinks(venues);
   }
+  function getLinks(venues){
+    $.get(`https://api.foursquare.com/v2/venues/${this.id}?oauth_token=AIG3KVDPZUNIT1PKK3CW2NCKPS51KDRTKLXNU3IFX1GUGFQA&v=20160623`,
+      function(data, status){
+        venueLinks(data.response.venue.canonicalUrl);
+     })
+   }
+  function venueLinks(url){
+    $('.places').each(function () {
+      var currentPlace = $(this);
+      currentPlace.wrap("<a href='" + url + "'</a>");
+    })
+  }
+
   function makeMarkers(pins){
     for (var i = 0; i < pins.length; i++) {
       var venueLat  = pins[i].location.lat;
