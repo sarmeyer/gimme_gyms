@@ -46,10 +46,13 @@ button:hover {
   position: absolute;
   left: 20%;
   top: 38%;
-  width: 500px;
+  width: 550px;
 }
 blockquote {
-  font-size: 35px;
+  font-size: 30px;
+}
+.quotes p {
+  font-size: 20px;
 }
 .sections {
   z-index: 1;
@@ -64,12 +67,93 @@ blockquote {
   text-align: center;
   font-size: 30px;
 }
-
+#vids {
+  background-image: url(http://www.technogym.com/blog/wp-content/uploads/2013/08/Picture1.jpg);
+  background-size: cover;
+}
+iframe {
+  margin: 10px;
+  width: 330px;
+  height: 280px;
+}
 #list {
-  display: flex;
-  flex: wrap;
+  background-image: url(http://cdn.phillymag.com/wp-content/uploads/2016/02/yoga-studio.jpg);
+  background-size: cover;
+}
+a {
+  color: #FAF6E7;
+}
+.venues {
+  font-size: 35px;
+  color: #FAF6E7;
 }
 #food {
-  width: 100vw;
-  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.recipe_search {
+  font-size: 2em;
+  position: absolute;
+  right: 5%;
+  height: 45px;
+  width: 300px;
+}
+.credit {
+  text-align: right;
+  font-size: 18px;
+}
+.recipe_images {
+  width: 270px;
+  height: 230px;
+  margin: 5px;
+}
+.titles {
+  max-width: 270px;
+  display: block;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility opacity 0.2s;
+}
+#food div:hover .titles {
+visibility: visible;
+opacity: 1;
+}
+#food div {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+#food div:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #2098d1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#food div:hover:before, #food div:focus:before, #food div:active:before {
+  left: 0;
+  right: 0;
 }
