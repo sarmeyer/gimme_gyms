@@ -53,7 +53,7 @@ $('#homeButton').on('click',function(){
         var link = document.createElement('a');
         link.href = url;
         $(link).html(name)
-        $('.venues').append(link);
+        $('.scrollList').append(link);
         return venue.response.venue.canonicalUrl
     })
   })

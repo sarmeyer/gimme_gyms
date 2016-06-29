@@ -84,8 +84,12 @@ a {
   color: #FAF6E7;
 }
 .venues {
-  font-size: 35px;
+  font-size: 2em;
   color: #FAF6E7;
+}
+.scrollList {
+  height: 90vh;
+  overflow: scroll;
 }
 #food {
   display: flex;
