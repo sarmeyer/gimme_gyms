@@ -10,6 +10,7 @@ $(document).ready(function(){
       }
   });
   function randomRecipes(results) {
+    results.splice(0,2);
     results.forEach(function(recipe){
       var thumbnails = document.createElement('div');
       var img = document.createElement('img');

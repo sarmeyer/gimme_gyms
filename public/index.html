@@ -3,8 +3,6 @@
 
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="main.css">
         <meta charset="utf-8">
@@ -62,10 +60,9 @@
                 <div class="scrollList"></div>
             </div>
         </section>
-        <div class="headings">Recipes</div>
-        <form>
+        <div class="headings">Recipes |
             <input type="text" class='recipe_search' placeholder="Search recipes">
-        </form>
+        </div>
         <section class='sections' id='food'></section>
         <div class='credit'>Courtesy of Spoonacular</div>
         <section class='sections' id='vids'>
@@ -73,11 +70,15 @@
             <div id="player"></div>
         </section>
         <div class="headings">@sarmeyer 2016</div>
-        <script type="text/javascript" src='recipes.js'></script>
-        <script type="text/javascript" src='quotes.js'></script>
-        <script type="text/javascript" src='vids.js'></script>
-        <script type="text/javascript" src='location.js'></script>
-        <script type="text/javascript" src='scroll.js'></script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92DxcX8-pGzaLxXLTfwpjYhfTexY3P-w&callback="></script>
+        <script type="text/javascript" src='js/recipes.js'></script>
+        <script type="text/javascript" src='js/quotes.js'></script>
+        <script type="text/javascript" src='js/vids.js'></script>
+        <script type="text/javascript" src='js/location.js'></script>
+        <script type="text/javascript" src='js/scroll.js'></script>
     </body>
 </html>
