@@ -10,16 +10,17 @@ $(document).ready(function(){
       }
   });
   function randomRecipes(results) {
-    results.splice(0,2);
+    results.splice(0,7);
     results.forEach(function(recipe){
       var thumbnails = document.createElement('div');
       var img = document.createElement('img');
       var spanText = document.createElement('p');
       $(img).addClass('recipe_images');
       $(spanText).addClass('titles');
+      $(thumbnails).addClass('allRecipes')
       img.src = recipe.image;
       img.id = recipe.id;
-      img.alt = 'No image available, but the link works!'
+      img.alt = 'No image available, click here for more recipe details!'
       $(spanText).html(recipe.title);
       $(thumbnails).append(spanText);
       $(thumbnails).append(img);
