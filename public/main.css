@@ -6,7 +6,6 @@ nav {
     font-size: 2em;
 }
 #homebutton {
-    /*background-color: transparent;*/
     color: black;
     border: 2px solid black;
 }
@@ -70,6 +69,7 @@ iframe {
     height: 280px;
 }
 #list {
+  position: relative;
     background-image: url(http://cdn.phillymag.com/wp-content/uploads/2016/02/yoga-studio.jpg);
     background-size: cover;
 }
@@ -77,8 +77,15 @@ a {
     color: #FAF6E7;
 }
 .venues {
+  position: relative;
     font-size: 2em;
     color: #FAF6E7;
+}
+.list {
+  position: absolute;
+  width: 35vw;
+  height: 90vh;
+  margin-left: 35%;
 }
 .scrollList {
     height: 90vh;
