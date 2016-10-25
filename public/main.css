@@ -1,43 +1,32 @@
 body {
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Open Sans', cursive;
+    font-weight: lighter;
 }
 nav {
-    background-color: #D2CEC3;
+    background-color: #07194F !important;
     font-size: 2em;
 }
-#homebutton {
-    color: black;
-    border: 2px solid black;
-}
-.container button {
-    margin-top: 15%;
-    margin-bottom: 50%;
-    position: relative;
-    z-index: 2;
-    height: 2em;
-    width: 7em;
-    margin-left: 40%;
-    font-size: 2.5em;
-}
-button:hover {
-    background-color: #756F6D;
-    color: white;
+#home a {
+    margin-top: 35%;
+    margin-left: 70%;
+    width: 9em;
 }
 .container img {
-    z-index: 1;
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.6;
+    height: 100vh;
+    width: 35vw;
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
 }
 .quotes {
-    z-index: 1;
     position: absolute;
     left: 20%;
     top: 38%;
-    width: 45%;
+    width: 38%;
+}
+.quotes p {
+    text-align: right;
 }
 blockquote {
     font-size: 2em;
@@ -55,7 +44,7 @@ blockquote {
 .headings {
     width: 100vw;
     height: 50px;
-    background-color: #D2CEC3;
+    background-color: #07194F;
     text-align: center;
     font-size: 2.2em;
 }
@@ -69,7 +58,7 @@ iframe {
     height: 280px;
 }
 #list {
-  position: relative;
+    position: relative;
     background-image: url(http://cdn.phillymag.com/wp-content/uploads/2016/02/yoga-studio.jpg);
     background-size: cover;
 }
@@ -77,15 +66,15 @@ a {
     color: #FAF6E7;
 }
 .venues {
-  position: relative;
+    position: relative;
     font-size: 2em;
     color: #FAF6E7;
 }
 .list {
-  position: absolute;
-  width: 35vw;
-  height: 90vh;
-  margin-left: 35%;
+    position: absolute;
+    width: 35vw;
+    height: 90vh;
+    margin-left: 35%;
 }
 .scrollList {
     height: 90vh;
@@ -161,4 +150,10 @@ a {
 #food div:hover:before, #food div:focus:before, #food div:active:before {
     left: 0;
     right: 0;
+}
+0;
+right: 0;
+
+}
+
 }

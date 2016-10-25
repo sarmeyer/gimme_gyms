@@ -27,8 +27,8 @@ $(document).ready(function(){
   author: "--Anonymous"
   },
   {
-  quote: "Take up one idea. Make that one idea your life--think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone. This is the way to success.",
-  author: "--Swami Vivekananda"
+  quote: "In the middle of every difficulty lies opportunity",
+  author: "--Albert Einstein"
   },
   {
   quote: "All our dreams can come true if we have the courage to pursue them.",
@@ -183,7 +183,7 @@ $(document).ready(function(){
   author: "–Earl Nightingale"
   },
   {
-  quote: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover.",
+  quote: "...throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover.",
   author: "–Mark Twain"
   },
   {
